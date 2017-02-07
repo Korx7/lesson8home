@@ -1,0 +1,112 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+nav {
+    background-color: #39444A;
+    flex-basis: 240px;
+    flex-shrink: 0;
+}
+article {
+    flex-grow: 1;
+}
+nav ul {
+    margin: 0;
+    padding: 20px 0px 0px 0px;
+}
+nav ul li {
+    list-style-type: none;
+
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 6px 0px 6px 50px;
+    text-transform: uppercase;
+}
+nav > ul > li:hover a{
+    outline: 1px solid black;
+}
+a[href$="alfa"]{
+    background-image: url("../img/stumbleupon.png");
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size:20px 20px;
+}
+
+a[href$="beta"]{
+    background-image: url("../img/pinterest.png");
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size:20px 20px;
+}
+a[href$="gamma"]{
+    background-image: url("../img/last.fm.png");
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    background-size:20px 20px;
+}
+a[href$="book.com"]{
+    background-image: url("../img/quora.png"),url("../img/dribbble.png");
+    background-repeat: no-repeat,no-repeat;
+    background-position: 10% 50%, 65% 50%;
+    background-size:20px 20px,20px 20px;
+}
+article {
+    padding: 20px 60px 10px 50px;
+}
+section p {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+@media screen and (max-width: 1050px) {
+    span {
+        display: none;
+    }
+    nav ul li a {
+        height: 19px;
+        padding: 12px 0px 12px 0px;
+    }
+    a[href$="book.com"] {
+        background-image: url("../img/quora.png");
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 25px 25px;
+    }
+    a[href$="alfa"]{
+        background-position: 50% 50%;
+        background-size:25px 25px;
+    }
+    a[href$="beta"]{
+        background-position: 50% 50%;
+        background-size:25px 25px;
+    }
+    a[href$="gamma"]{
+        background-position: 50% 50%;
+        background-size:25px 25px;
+    }
+
+    nav {
+        flex-basis: 60px;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        flex-direction: column;
+    }
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding-top: 10px;
+    }
+    nav ul  li a{
+        width: 65px;
+    }
+    nav > ul > li:hover a {
+        outline: none;
+    }
+}
